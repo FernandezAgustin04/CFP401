@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Formación Laboral Nº 405 - CFP 401</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Phosphor Icons for course icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Custom scrollbar for a polished look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-blue-200 selection:text-blue-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center gap-2 group">
+                        <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl group-hover:bg-blue-700 transition-colors">
+                            C
+                        </div>
+                        <span class="font-bold text-xl md:text-2xl text-gray-900 tracking-tight">CFP 401 / 405</span>
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Inicio</a>
+                    <a href="#cursos" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Cursos</a>
+                    <a href="#galeria" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Galería</a>
+                    <a href="#contacto" class="px-5 py-2.5 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-md shadow-blue-200">Contacto</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-blue-600 focus:outline-none p-2">
+                        <i class="ph ph-list text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#inicio" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Inicio</a>
+                <a href="#cursos" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Cursos</a>
+                <a href="#galeria" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Galería</a>
+                <a href="#contacto" class="block px-3 py-3 mt-4 text-center rounded-md text-base font-medium bg-blue-600 text-white hover:bg-blue-700">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-blue-50 via-white to-blue-50 overflow-hidden relative">
+        <!-- Decorative blob -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-blue-100 blur-3xl opacity-50 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-blue-200 blur-3xl opacity-40 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 font-semibold text-sm mb-6 border border-blue-200">Inscripciones Abiertas 2026</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+                        Capacitate hoy para <br class="hidden lg:block"/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">el trabajo del mañana</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
+                        El Centro de Formación Laboral ofrece cursos gratuitos, con certificación oficial y rápida salida laboral. Potenciá tus habilidades.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#cursos" class="px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 text-center flex items-center justify-center gap-2">
+                            Ver Cursos Disponibles <i class="ph ph-arrow-right font-bold"></i>
+                        </a>
+                        <a href="#contacto" class="px-8 py-4 bg-white text-gray-700 font-semibold rounded-xl border-2 border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all text-center">
+                            Consultas
+                        </a>
+                    </div>
+                </div>
+                <div class="relative hidden sm:block">
+                    <!-- Placeholder for Hero Image -->
+                    <div class="rounded-2xl overflow-hidden shadow-2xl relative aspect-video lg:aspect-square">
+                        <img src="https://placehold.co/800x800/1e3a8a/ffffff?text=Taller+Práctico+CFP" alt="Estudiantes en el taller" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                            <div class="p-6 text-white">
+                                <p class="font-semibold text-lg">Aprendizaje 100% práctico</p>
+                                <p class="text-sm text-gray-200">Instalaciones equipadas para tu desarrollo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="cursos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nuestra Oferta Educativa</h2>
+                <div class="w-20 h-1.5 bg-blue-600 mx-auto rounded-full mb-6"></div>
+                <p class="text-lg text-gray-600">
+                    Descubrí nuestra variedad de cursos diseñados para insertarte rápidamente en el mercado laboral actual.
+                </p>
+            </div>
+
+            <!-- Courses Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="courses-container">
+                <!-- Javascript will populate this -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nuestras Instalaciones</h2>
+                <div class="w-20 h-1.5 bg-blue-600 mx-auto rounded-full mb-6"></div>
+                <p class="text-lg text-gray-600">
+                    Conocé los talleres, herramientas y aulas donde se dictan nuestras clases prácticas.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group relative">
+                    <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Taller+Mecánica" alt="Taller" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group relative">
+                    <img src="https://placehold.co/600x400/0ea5e9/ffffff?text=Aula+Informática" alt="Aula" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group relative">
+                    <img src="https://placehold.co/600x400/6366f1/ffffff?text=Taller+Gastronomía" alt="Herramientas" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group relative sm:col-span-2 lg:col-span-1 xl:col-span-2">
+                    <img src="https://placehold.co/800x400/4f46e5/ffffff?text=Alumnos+en+Prácticas" alt="Clase" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group relative">
+                    <img src="https://placehold.co/600x400/2563eb/ffffff?text=Herramientas+Especializadas" alt="Herramientas" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-blue-600 rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row">
+                <!-- Contact Info -->
+                <div class="lg:w-2/5 p-10 md:p-12 text-white flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-2">Ponte en contacto</h3>
+                        <p class="text-blue-100 mb-8 text-lg">¿Tenés dudas sobre las inscripciones o los programas de estudio? ¡Escribinos!</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-blue-500/50 p-3 rounded-lg"><i class="ph ph-map-pin text-2xl"></i></div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">Ubicación</h4>
+                                    <p class="text-blue-100">Calle Falsa 123, Ciudad, Buenos Aires</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-blue-500/50 p-3 rounded-lg"><i class="ph ph-envelope-simple text-2xl"></i></div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">Email</h4>
+                                    <p class="text-blue-100">info@cfp401.edu.ar</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-blue-500/50 p-3 rounded-lg"><i class="ph ph-phone text-2xl"></i></div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">Teléfono</h4>
+                                    <p class="text-blue-100">(011) 4567-8900</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-12 flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-blue-600 transition-colors"><i class="ph ph-facebook-logo text-xl"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-blue-600 transition-colors"><i class="ph ph-instagram-logo text-xl"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-blue-600 transition-colors"><i class="ph ph-whatsapp-logo text-xl"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Contact Form (Static Representation) -->
+                <div class="lg:w-3/5 bg-gray-50 p-10 md:p-12">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Envíanos un mensaje</h3>
+                    <form onsubmit="event.preventDefault(); showMessage();" class="space-y-5">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Nombre completo</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all" placeholder="Juan Pérez">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Correo electrónico</label>
+                                <input type="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all" placeholder="juan@ejemplo.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Curso de interés (Opcional)</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all bg-white">
+                                <option value="">Seleccione un curso...</option>
+                                <option>Informática</option>
+                                <option>Diseño</option>
+                                <option>Reparación de Celulares</option>
+                                <option>Electricidad</option>
+                                <option>Gas</option>
+                                <option>Soldadura</option>
+                                <option>Gastronomía</option>
+                                <option>Mecánica</option>
+                                <option>Climatización</option>
+                                <option>Transmisiones</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
+                            <textarea rows="4" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all resize-none" placeholder="Escribe tu consulta aquí..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-gray-900 text-white font-semibold rounded-lg hover:bg-black transition-colors shadow-lg">
+                            Enviar Consulta
+                        </button>
+                    </form>
+                    
+                    <!-- Success Message Box -->
+                    <div id="success-message" class="hidden mt-4 p-4 bg-green-100 border border-green-200 text-green-800 rounded-lg flex items-center gap-2">
+                        <i class="ph ph-check-circle text-xl"></i>
+                        <p>¡Gracias por tu consulta! Te responderemos a la brevedad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-blue-600 rounded text-white flex items-center justify-center font-bold text-sm">
+                    C
+                </div>
+                <span class="font-bold text-white text-lg">CFP 401 / 405</span>
+            </div>
+            <p class="text-sm text-center md:text-left">
+                &copy; <span id="year"></span> Centro de Formación Laboral. Todos los derechos reservados.
+            </p>
+            <div class="flex gap-4 text-sm">
+                <a href="#" class="hover:text-white transition-colors">Términos</a>
+                <a href="#" class="hover:text-white transition-colors">Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Application Logic -->
+    <script>
+        // Set dynamic year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Navbar blur effect on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('shadow-sm');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.add('shadow-sm');
+            }
+        });
+
+        // Course Data
+        const courses = [
+            { title: 'Informática', icon: 'ph-desktop', desc: 'Operación de PC, paquete Office y herramientas de ofimática modernas.', color: 'text-blue-600', bg: 'bg-blue-100' },
+            { title: 'Diseño', icon: 'ph-pen-nib', desc: 'Diseño gráfico, herramientas digitales y maquetación visual.', color: 'text-purple-600', bg: 'bg-purple-100' },
+            { title: 'Reparación de Celulares', icon: 'ph-device-mobile', desc: 'Diagnóstico y reparación de hardware/software de dispositivos móviles.', color: 'text-emerald-600', bg: 'bg-emerald-100' },
+            { title: 'Electricidad', icon: 'ph-lightning', desc: 'Electricidad domiciliaria, normativas, cableado y tableros.', color: 'text-yellow-600', bg: 'bg-yellow-100' },
+            { title: 'Gas', icon: 'ph-fire', desc: 'Instalaciones de gas, normativas de seguridad y mantenimiento.', color: 'text-orange-600', bg: 'bg-orange-100' },
+            { title: 'Soldadura', icon: 'ph-sparkle', desc: 'Técnicas de soldadura por arco, MIG/MAG y medidas de seguridad.', color: 'text-red-600', bg: 'bg-red-100' },
+            { title: 'Gastronomía', icon: 'ph-cooking-pot', desc: 'Técnicas culinarias, manipulación de alimentos y panadería.', color: 'text-rose-600', bg: 'bg-rose-100' },
+            { title: 'Mecánica', icon: 'ph-wrench', desc: 'Mecánica ligera del automotor, mantenimiento preventivo y reparación.', color: 'text-slate-600', bg: 'bg-slate-100' },
+            { title: 'Climatización', icon: 'ph-thermometer', desc: 'Instalación y reparación de equipos de aire acondicionado y refrigeración.', color: 'text-cyan-600', bg: 'bg-cyan-100' },
+            { title: 'Transmisiones', icon: 'ph-gear', desc: 'Reparación de cajas de cambio, diferenciales y sistemas de transmisión.', color: 'text-indigo-600', bg: 'bg-indigo-100' },
+        ];
+
+        // Render Courses
+        const coursesContainer = document.getElementById('courses-container');
+        
+        courses.forEach(course => {
+            const card = document.createElement('div');
+            card.className = 'group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full';
+            card.innerHTML = `
+                <div class="w-14 h-14 rounded-xl ${course.bg} ${course.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <i class="ph ${course.icon} text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">${course.title}</h3>
+                <p class="text-gray-600 mb-6 flex-grow">${course.desc}</p>
+                <div class="mt-auto">
+                    <a href="#contacto" class="text-blue-600 font-semibold inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                        Consultar <i class="ph ph-arrow-right"></i>
+                    </a>
+                </div>
+            `;
+            coursesContainer.appendChild(card);
+        });
+
+        // Form Submission Simulation
+        function showMessage() {
+            const msgBox = document.getElementById('success-message');
+            msgBox.classList.remove('hidden');
+            // Hide after 5 seconds
+            setTimeout(() => {
+                msgBox.classList.add('hidden');
+            }, 5000);
+            
+            // Clear form inputs
+            document.querySelector('form').reset();
+        }
+    </script>
+</body>
+</html>
